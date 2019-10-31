@@ -118,8 +118,6 @@ você coloca seus projetos vefrsionados em GIT.
   $ git push nomerepositorio 
   
  - Clonando repositórios remotos.
-  $
+  $ git clone + HTTPS OU SSH do repositório.
     
     
-    
- 
