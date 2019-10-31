@@ -109,8 +109,8 @@ você coloca seus projetos vefrsionados em GIT.
         
  - Ligando repositório local à um remoto.
    $ git remote add origin(qlqr nome) git@github.com:PedroFavoretti/Learning_Git.git(diretório do seu git)
-   $ git remote     -> lista os repositórios
-   $ git remote -v  -> mais informações, 
+   $ git remote                           -> lista os repositórios
+   $ git remote -v                          -> mais informações, 
    $ git push -u origin(qlqr nome) master -> envia os arquivos que tem pasa um repositorio determinado. -u serve pra crackear
     na proxima so coloca git push.
    
