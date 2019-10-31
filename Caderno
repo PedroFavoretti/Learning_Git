@@ -119,5 +119,107 @@ você coloca seus projetos vefrsionados em GIT.
   
  - Clonando repositórios remotos.
   $ git clone + HTTPS OU SSH do repositório.
+ -------------------------------------------------------------------------------------------------------------------------------
     
+       RAMIFICAÇÃO (BRANCH)
+
+ - O que é um Branch?
+  Um ponteiro móvel que leva ao commit, toda vez que commitamos o git faz uma hash e cada hash uma snap. O branch aponta
+  para o commit... O primeiro branch sempre se chamará "Master" e cada vez que fizer um commit o branch master vai seguindo
+  os commits, por exemplo se temos 3 commits, com a hash a1, a2, a3 o ultimo commit a3 vai ser o master. E podemos criar
+  um novo branch apontando para o mesmo commit, ou um commit diferente.
+    Por que usar?
+  Podemos modificar arquivos sem alterar o local principal(master), exemplo: Corrigir bug, com pessoas utilizando o master.
+  É facilmente "desligavel", facil de se apagar um branch. 
+
+ - Como criar um branch:
+  $ git checkout -b nome-do-branch
+
+ - movendo e deletando branch
+  $ git branch                   -> listar os branchs
+  $ git checkout nome-do-branch  -> utiliza outro branch
+  $ git branch -D nome-do-branch -> Apaga o branch
+
+ - Merge
+  $ git merge nome-do-branch
+   - Para ver o merge feito 
+    $ git log --graph 
+  
+ - Rebase    
+  $ git rebase nome-do-branch
+
+-------------------------------------------------------------------------------------------------------------------------------
     
+       EXTRAS
+ 
+ - .gitignore
+  Quando voce quer ignorar alguns arquivos dentro do repositório, exemplo senhas etc..
+  - Criar um arquivo .gitignore 
+    $ vi .gitignore
+    Dentro do vi escreve o que deseja ignorar. Ex:
+    * (Significa "Tudo") .JSON -> OU seja, queremos ignorar tudo que contenha .json
+    Podemos também digitar o nome do arquivo especifico que é desejado ignorar. 
+  Temos também o https://github.com/github/gitignore que é uma ferramenta que possui um conjunto de .gitignore para um determi-
+  nado projeto, por exemplo um projeto em GRUPAL, dentro do .gitignore correspondente aparece os padroes de arquivos que
+  costumamos ter em grupal.
+ 
+ - Git stash
+  Responsavel por guardar modificações ainda não commitada em uma pasta em que pode ser chamada quando necessário.
+  $ git stash
+   - Para depois aplicar as mudanças:
+   $ git stash apply 
+  $ git stash list  -> para mostrar a lista de arquivos que pode ser utilizado.
+  $ git stash clear -> Para limpar todos os arquivos stash
+
+ - ALIAS
+  $ git config --global alias.o-alias-desejado qual comando deseja utilizar. Exemplo:
+  $ git config --global alias.s status
+  Agora toda vez q for ver o status é só:
+  $ git s
+
+ - Versionando com TAGS
+  $ git tag -a número da versao -m "Mensagem"
+  $ git tag -a 1.0.0 -m "Primera versão do ambiente"
+    Para subir a tag:
+    $ git push origin master --tags
+
+ - Git Revert
+  mesma coisa que o reset, mas mantem o log.
+  $ git revert log
+
+ - Apagando branches e tags remotos
+  $ git push origin(qlqrnome) : tags ou branch.
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
